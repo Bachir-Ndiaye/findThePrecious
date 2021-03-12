@@ -1,0 +1,126 @@
+@font-face { font-family: Aniron; 
+    src: url('./fonts/anirb.ttf') format('truetype');
+}
+ 
+ *{
+     margin: 0;
+     padding: 0;
+     font-family: Aniron;
+ }
+ 
+
+ $main-color : #FF4500;
+ $black : black;
+
+ body{
+    background-color: #D3D3D3;
+ }
+ section{
+     width: 70%;
+     margin: 0 auto;
+     justify-content: center;
+     padding-top: 75px;
+ }
+ .ring{
+     height: 60px;
+     width: 60px;
+     border-radius: 50%;
+     border: 7px solid $main-color;
+ }
+
+ /*header{
+     background-color: $main-color;
+ }
+ .o{
+     color: #8B4513;
+ }
+ header, ul{
+     color:white;
+     display: flex;
+     justify-content: space-between;
+ }
+*/
+
+header{
+    background-color: $main-color;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid $black;
+        > .nav-l ul{
+            color:white;
+            display: flex;
+            list-style-type: none;
+            > li{
+                margin: 15px 10px;
+                border-right: 1px solid white;
+                padding-right: 1rem;
+            }
+            > .active{
+                border-bottom: 3px solid white;
+            }
+        }
+        
+        > .nav-r {
+            padding-left: 10px;
+            padding-bottom: 5px;
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 2rem;
+            }
+            .o{
+            color: #8B4513;
+        }
+}
+ .double-ring, .single-ring, .inline-rings{ 
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     > h1{
+         font-size: 3.5rem;
+         padding: 0px 30px;
+     }
+ }
+
+ .sec-buttom h1{
+    font-size: 3.5rem;
+    padding: 0px 30px;
+ }
+
+
+
+    @for $i from 1 through 6 {
+        .ring-#{$i} {
+            width: 50px*($i/2);
+            height: 50px*($i/2);
+            border-radius: 50%;
+            border: 8px solid $black;
+            margin-left: -20px;
+        }
+    }
+
+    .sec-buttom h1{
+        text-align: center;
+    }
+
+.orange{
+    border: 15px solid #FFD700;
+    height: 200px;
+    width: 200px;
+    box-shadow: inset 5px 5px 3px #DAA520, 5px 5px 3px #DAA520;
+}
+footer {
+    border-top: 2px solid $black;
+    margin-top: 100px;
+    display: grid;
+    justify-content: center;
+    padding: 20px 80px;
+    background-color: $main-color;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    > .li-footer{
+       color: white
+    }
+  }
+  
+  
